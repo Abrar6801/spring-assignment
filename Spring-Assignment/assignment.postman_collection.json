@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "7aa9a169-a3cd-44b5-bfbc-77ac83c5e23b",
+		"name": "assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24496442"
+	},
+	"item": [
+		{
+			"name": "upload csv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/HP/Desktop/assignment/Spring-Assignment/src/main/resources/Inventory.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/csv/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"csv",
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "upload csv",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/HP/Desktop/assignment/Spring-Assignment/src/main/resources/Inventory.csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/csv/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"csv",
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Nov 2022 12:43:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "successfully uploaded"
+				}
+			]
+		},
+		{
+			"name": "call by service name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/csv/service/V.H.M.TRADERS VIJAYAWADA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"csv",
+						"service",
+						"V.H.M.TRADERS VIJAYAWADA"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "call by service name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/csv/service/V.H.M.TRADERS VIJAYAWADA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"csv",
+								"service",
+								"V.H.M.TRADERS VIJAYAWADA"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Disposition",
+							"value": "inline;filename=f.txt"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Nov 2022 12:46:15 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"code\": \"PACKTAG\",\n        \"name\": \"TAG ROLL\",\n        \"batch\": \"XXX\",\n        \"stock\": 15,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"0\",\n        \"rate\": \"0\",\n        \"exp\": \"1899-12-31T18:30:00.000+00:00\",\n        \"company\": \"GENARAL COMPANY\",\n        \"supplier\": \"V.H.M.TRADERS VIJAYAWADA\"\n    },\n    {\n        \"id\": 3,\n        \"code\": \"PACKTAG\",\n        \"name\": \"TAG ROLL\",\n        \"batch\": \"XXX\",\n        \"stock\": 15,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"0\",\n        \"rate\": \"0\",\n        \"exp\": \"1899-12-31T18:30:00.000+00:00\",\n        \"company\": \"GENARAL COMPANY\",\n        \"supplier\": \"V.H.M.TRADERS VIJAYAWADA\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "expiration date",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/csv/service/MED MANOR ORGANICS PVT LT     HYDERABAD?exp=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"csv",
+								"service",
+								"MED MANOR ORGANICS PVT LT     HYDERABAD"
+							],
+							"query": [
+								{
+									"key": "exp",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Nov 2022 12:50:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 6,\n        \"code\": \"XXCKS\",\n        \"name\": \"GIFT ITEM\",\n        \"batch\": \"ZINCOLD TA\",\n        \"stock\": 2,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"1\",\n        \"rate\": \"1\",\n        \"exp\": \"2030-09-30T18:30:00.000+00:00\",\n        \"company\": \"GIFT ARTICALS\",\n        \"supplier\": \"MED MANOR ORGANICS PVT LT     HYDERABAD\"\n    },\n    {\n        \"id\": 7,\n        \"code\": \"XXCLB\",\n        \"name\": \"GIFT BAG\",\n        \"batch\": \"TRELLIS\",\n        \"stock\": 2,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"0.01\",\n        \"rate\": \"0.01\",\n        \"exp\": \"2030-02-28T18:30:00.000+00:00\",\n        \"company\": \"GIFT ARTICALS\",\n        \"supplier\": \"MED MANOR ORGANICS PVT LT     HYDERABAD\"\n    },\n    {\n        \"id\": 8,\n        \"code\": \"XXCKS\",\n        \"name\": \"GIFT ITEM\",\n        \"batch\": \"PAINT/SHAR\",\n        \"stock\": 2,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"1\",\n        \"rate\": \"0.95\",\n        \"exp\": \"2030-02-28T18:30:00.000+00:00\",\n        \"company\": \"GIFT ARTICALS\",\n        \"supplier\": \"MED MANOR ORGANICS PVT LT     HYDERABAD\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "paging",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "paging",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/csv/service/DR REDDY`S LABORATORIES LTD   HYDERABAD?size=10&page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"csv",
+								"service",
+								"DR REDDY`S LABORATORIES LTD   HYDERABAD"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Nov 2022 12:51:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 254,\n        \"code\": \"DRAT2\",\n        \"name\": \"ATARAX SYRUP\",\n        \"batch\": \"LI0319111\",\n        \"stock\": 47,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"83\",\n        \"rate\": \"59.29\",\n        \"exp\": \"2022-11-29T18:30:00.000+00:00\",\n        \"company\": \"DR REDDYYS (GRANDERA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 255,\n        \"code\": \"DXAC4\",\n        \"name\": \"ATOCOR-40MG TABS\",\n        \"batch\": \"E901723\",\n        \"stock\": 10,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"295.59\",\n        \"rate\": \"211.14\",\n        \"exp\": \"2022-11-29T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S(XENURA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 256,\n        \"code\": \"DRNS2\",\n        \"name\": \"NISE TAB\",\n        \"batch\": \"E901660\",\n        \"stock\": 60,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"81.4\",\n        \"rate\": \"58.14\",\n        \"exp\": \"2022-11-29T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S(AQURA+SG)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 257,\n        \"code\": \"DXS51\",\n        \"name\": \"STAMLO 5MG TAB\",\n        \"batch\": \"E901681\",\n        \"stock\": 1,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"85.49\",\n        \"rate\": \"61.06\",\n        \"exp\": \"2022-11-29T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S (ZENURA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 291,\n        \"code\": \"DXAC4\",\n        \"name\": \"ATOCOR-40MG TABS\",\n        \"batch\": \"E901721\",\n        \"stock\": 19,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"295.59\",\n        \"rate\": \"211.14\",\n        \"exp\": \"2022-10-31T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S(XENURA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 292,\n        \"code\": \"842200\",\n        \"name\": \"STAMLO 10 TABS\",\n        \"batch\": \"E901662\",\n        \"stock\": 6,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"166.3\",\n        \"rate\": \"118.78\",\n        \"exp\": \"2022-10-31T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S (ZENURA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 379,\n        \"code\": \"UBNP8\",\n        \"name\": \"NOOTROPIL 800MG TABS\",\n        \"batch\": \"EMV2000157\",\n        \"stock\": 10,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"653.4\",\n        \"rate\": \"466.71\",\n        \"exp\": \"2022-10-30T18:30:00.000+00:00\",\n        \"company\": \"DR REDDYYS (GRANDERA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 380,\n        \"code\": \"DROM2\",\n        \"name\": \"OMEZ-20MG CAP\",\n        \"batch\": \"E000204\",\n        \"stock\": 200,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"54.21\",\n        \"rate\": \"38.72\",\n        \"exp\": \"2022-10-30T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S(AQURA+SG)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 381,\n        \"code\": \"DXS15\",\n        \"name\": \"STAMLO 2.5MG TABS\",\n        \"batch\": \"E901576\",\n        \"stock\": 24,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"54.21\",\n        \"rate\": \"38.72\",\n        \"exp\": \"2022-10-30T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S (ZENURA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    },\n    {\n        \"id\": 382,\n        \"code\": \"DXS15\",\n        \"name\": \"STAMLO 2.5MG TABS\",\n        \"batch\": \"E901592\",\n        \"stock\": 60,\n        \"deal\": 0,\n        \"free\": 0,\n        \"mrp\": \"54.21\",\n        \"rate\": \"38.72\",\n        \"exp\": \"2022-10-30T18:30:00.000+00:00\",\n        \"company\": \"DR.REDDY`S LAB`S (ZENURA)\",\n        \"supplier\": \"DR REDDY`S LABORATORIES LTD   HYDERABAD\"\n    }\n]"
+				}
+			]
+		}
+	]
+}
